@@ -44,12 +44,12 @@ function Todo(props) {
             <div className="flex md:w-auto w-full md:px-0 px-3">
                 {
                 isReadOnly ? 
-                (<button onClick={handleEdit} type="button" class="text-white justify-center md:w-auto w-[50%] flex gap-1 items-center bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm transition-all px-5 py-2.5 me-2">
+                (<button disabled={props.todo.completed} onClick={handleEdit} type="button" class="text-white justify-center md:w-auto w-[50%] flex gap-1 items-center bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm transition-all px-5 py-2.5 me-2">
                     <CiEdit className="inline" />
                     <span>Edit</span>
                 </button>)
                 : 
-                (<button onClick={handleSave} type="button" class="text-white justify-center md:w-auto w-[50%] flex gap-1 items-center bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm transition-all px-5 py-2.5 me-2">
+                (<button disabled={props.todo.completed} onClick={handleSave} type="button" class="text-white justify-center md:w-auto w-[50%] flex gap-1 items-center bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm transition-all px-5 py-2.5 me-2">
                     <CiEdit className="inline" />
                     <span>Save</span>
                 </button>)
